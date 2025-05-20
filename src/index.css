@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  /* Modo claro */
+  --color-bg: 234 234 243; /* Fondo general claro */
+  --color-box: 255 255 255; /* Cajas / tarjetas */
+
+  --btn-color: 20 33 61; /* Texto de botón oscuro (#14213D) */
+
+  --heading-1: 20 33 61; /* Título fuerte (oscuro) */
+  --heading-2: 0 180 216; /* Turquesa (#00B4D8) */
+  --heading-3: 255 195 0; /* Amarillo (#FFC300) */
+
+  --accent-orange: 255 106 19; /* Naranja (#FF6A13) */
+  --accent-green: 15 240 128; /* Verde lima (#0FF080) */
+  --accent-pink: 254 1 128; /* Rosa (#FE0180) */
+  --color-one: 17 45 93; /* Footer claro (versión más intensa del azul oscuro) */
+
+  --text-footer: 234 234 243
+}
+
+.dark {
+  /* Modo oscuro */
+  --color-bg: 3 7 18; /* Fondo general oscuro (muy oscuro) */
+  --color-box: 20 33 61; /* Cajas / tarjetas en azul oscuro (#14213D) */
+
+  --btn-color: 234 234 243; /* Texto claro para botones */
+
+  --heading-1: 255 255 255; /* Título blanco */
+  --heading-2: 0 180 216; /* Turquesa (#00B4D8) */
+  --heading-3: 255 195 0; /* Amarillo (#FFC300) */
+
+  --accent-orange: 255 106 19; /* Naranja (#FF6A13) */
+  --accent-green: 15 240 128; /* Verde lima (#0FF080) */
+  --accent-pink: 254 1 128; /* Rosa (#FE0180) */
+  --color-one: 3 7 18; /* Footer oscuro */
+
+  --text-footer: 234 234 243
+}
+
+@layer utilities {
+  .bg-body {
+    background-color: rgb(var(--color-bg));
+  }
+  .bg-box-bg {
+    background-color: rgb(var(--color-box));
+  }
+  .bg-footer {
+    background-color: rgb(var(--color-one));
+  }
+  .bg-orange {
+    background-color: rgb(var(--accent-orange));
+  }
+  .bg-blue {
+    background-color: rgb(var(--heading-2));
+  }
+
+  .text-heading-1 {
+    color: rgb(var(--heading-1));
+  }
+  .text-heading-2 {
+    color: rgb(var(--heading-2));
+  }
+  .text-heading-3 {
+    color: rgb(var(--heading-3));
+  }
+  .text-accent-orange {
+    color: rgb(var(--accent-orange));
+  }
+  .text-accent-green {
+    color: rgb(var(--accent-green));
+  }
+  .text-accent-pink {
+    color: rgb(var(--accent-pink));
+  }
+  .text-back {
+    color: rgb(var(--text-footer));
+  }
+
+  .btn-color {
+    color: rgb(var(--btn-color));
+  }
+
+  .color-one {
+    background-color: rgb(var(--color-one));
+  }
+
+  .background-card {
+    background-color: rgb(var(--btn-color));
+  }
+
+  .hover\:bg-background-card:hover {
+    background-color: rgb(var(--btn-color)); /* Variable CSS */
+  }
+  .hover\:text-heading-2:hover {
+    color: rgb(var(--color-bg)); /* Variable CSS */
+  }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
