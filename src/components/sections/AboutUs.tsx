@@ -11,7 +11,7 @@ export const AboutUs = () => {
         <div className="w-full md:w-5/12 lg:w-1/2">
           <div className="w-full h-80 sm:h-96 relative">
             <img
-              src="https://images.pexels.com/photos/1181269/pexels-photo-1181269.jpeg/"
+              src="https://images.pexels.com/photos/6913300/pexels-photo-6913300.jpeg"
               className="w-full h-full object-cover rounded-3xl shadow-lg relative z-10"
               alt="About Us"
             />

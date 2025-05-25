@@ -3,6 +3,7 @@ import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { motion } from "framer-motion";
+import logo from "../../assets/images/logo.png";
 
 export const Hero = () => {
   const [isDark, setIsDark] = useState(false);
@@ -10,6 +11,13 @@ export const Hero = () => {
     const root = window.document.documentElement;
     root.classList.toggle("dark", isDark);
   }, [isDark]);
+
+  const handleScrollToContact = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="relative pt-32 lg:pt-36">
@@ -45,18 +53,13 @@ export const Hero = () => {
           </Paragraph>
           <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
-              <Button className="min-w-max ">
-                <a href="#contact" className="relative z-[5] text-white text-bold">
-                  ¡Empecemos!
-                </a>
-              </Button>
-              {/* Botón para cambiar a modo oscuro */}
-              {/* <button
-                onClick={() => setIsDark(!isDark)}
-                className="min-w-max px-6 py-3 rounded-xl border border-box-border text-heading-1 bg-box-bg hover:bg-[rgb(20,33,61)] hover:text-white transition"
+              <Button
+                className="w-1/2"
+                bgColor="bg-blue"
+                onClick={handleScrollToContact}
               >
-                {isDark ? "Modo Claro ☀️" : "Modo Oscuro 🌙"}
-              </button> */}
+                <span className="relative z-[5] text-white">¡Empecemos!</span>
+              </Button>
             </div>
           </div>
         </motion.div>
@@ -68,13 +71,19 @@ export const Hero = () => {
           className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-2-non lg:mx-0 mx-auto max-w-3xl"
         >
           {/* Cambiar esta imagen por un gif o animación de mi logo */}
-          {/* <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhpbndxeXJvOW5lMDk0ZXh2NWZtd28wMDdmdXUya3V6bTB2bm0xeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2XB76CaWPggiNW/giphy.gif" alt="Hero Image" width={2350} height={2359} className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non max-h-96"/> */}
-          <img
+          {/* <img
             src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDIyajVvaWNoNTRjNDl5ODhsaXRleHNqaXd1Y29kb2ppaTFmeG8wdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Ih6NnugfrRa3UmyWO3/giphy.gif"
             alt="Hero Image"
             width={2350}
             height={2359}
             className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non max-h-96"
+          /> */}
+          <img
+            src={logo}
+            alt="Hero Image"
+            width={2350}
+            height={2359}
+            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-contain lg:max-h-non max-h-96"
           />
         </motion.div>
       </Container>

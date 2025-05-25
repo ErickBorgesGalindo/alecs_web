@@ -136,8 +136,8 @@ export const Footer = () => {
             />
           </div>
           <div className="mt-4 flex justify-center">
-            <Button className="w-8/12 rounded-xl">
-              <text className="text-white font-medium">¡Suscribete!</text>
+            <Button className="w-8/12 rounded-xl bg-blue">
+              <span className="text-white font-medium">¡Suscribete!</span>
             </Button>
           </div>
         </div>

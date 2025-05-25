@@ -11,6 +11,13 @@ export const Contact = () => {
     descripcionProyecto: "",
   });
 
+  // const handleScrollToContact = () => {
+  //   const section = document.getElementById("contact");
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -20,11 +27,11 @@ export const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Formulario enviado:", formData);
-    // Aquí podrías agregar la lógica para enviar el formulario
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log("Formulario enviado:", formData);
+  //   // Aquí podrías agregar la lógica para enviar el formulario
+  // };
 
   return (
     <section id="about-us" className="mt-20 mb-10 px-4 sm:px-10">
@@ -39,7 +46,11 @@ export const Contact = () => {
               </p>
             </div>
 
-            <form className="w-full max-w-lg mt-10">
+            <form
+              className="w-full max-w-lg mt-10"
+              action="https://formspree.io/f/xknyreng"
+              method="POST"
+            >
               <div className="mb-4">
                 <label
                   htmlFor="nombre"
@@ -116,9 +127,10 @@ export const Contact = () => {
               </div>
 
               <Button
-                className="w-full sm:w-auto px-6 py-2 mt-6 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition"
+                className="w-1/2"
+                bgColor="bg-blue"
               >
-                Enviar
+                <span className="relative z-[5] text-white">Enviar</span>
               </Button>
             </form>
           </div>

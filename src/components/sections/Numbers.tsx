@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaUser } from "react-icons/fa";
 import { Container } from "../shared/Container";
 import worldMapDots from "../../assets/images/world-map-dots.png";
+import { Button } from "../shared/Button";
 
 const avatarPositions = [
   "top-[20%] left-[30%]",
@@ -11,11 +12,23 @@ const avatarPositions = [
   "top-[60%] left-[80%]",
 ];
 
-const avatarColors = ["bg-orange", "bg-green-500", "bg-blue-500", "bg-pink-500"];
+const avatarColors = [
+  "bg-orange",
+  "bg-green-500",
+  "bg-blue-500",
+  "bg-pink-500",
+];
 
 export const Numbers = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const handleScrollToContact = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,10 +52,7 @@ export const Numbers = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-20 bg-gray-900 text-[#F3F3EA]"
-    >
+    <section ref={sectionRef} className="relative py-20 text-heading-1">
       <Container className="flex flex-col lg:gap-12 lg:flex-row items-center justify-between gap-20">
         {/* Mapa con íconos */}
         <motion.div
@@ -77,26 +87,28 @@ export const Numbers = () => {
           <h2 className="text-2xl font-bold mb-4">
             Trabajamos con clientes de todo el mundo
           </h2>
-          <p className="text-[#F3F3EA] text-sm mb-6">
+          <p className="text-heading-1 text-sm mb-6">
             Nuestra presencia global refleja nuestro compromiso inquebrantable
             con brindar servicios excepcionales y soluciones innovadoras, sin
             importar las fronteras geográficas.
           </p>
           <div className="flex justify-center lg:justify-start gap-10 mb-6">
             <div>
-              <p className="text-4xl font-bold">20</p>
-              <p className="text-[#F3F3EA] text-sm">Clientes internacionales</p>
+              <p className="text-5xl font-extrabold text-accent-orange">20</p>
+              <p className="text-heading-1 text-lg font-semibold">Clientes internacionales</p>
             </div>
             <div>
-              <p className="text-4xl font-bold">40</p>
-              <p className="text-[#F3F3EA] text-sm">
+              <p className="text-5xl font-extrabold text-heading-2">40</p>
+              <p className="text-heading-1 text-lg font-semibold">
                 Proyectos internacionales
               </p>
             </div>
           </div>
-          <a href="#contact" className="bg-orange text-[#F3F3EA] font-semibold py-2 px-6 rounded-full hover:bg-green-500 transition">
-            Comenzar
-          </a>
+          <Button className="w-1/2" bgColor="bg-pink" onClick={handleScrollToContact}>
+            <span className="relative z-[5] text-white">
+              Solicitar consulta
+            </span>
+          </Button>
         </motion.div>
       </Container>
     </section>

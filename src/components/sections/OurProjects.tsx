@@ -4,28 +4,33 @@ import { ProjectCard } from "../cards/ProjectCard";
 import { Title } from "../shared/Title";
 import { Paragraph } from "../shared/Paragraph";
 import { motion } from "framer-motion";
-import softwareImage from "../../assets/images/p1.webp";
+import { Button } from "../shared/Button";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
     title: "Desarrollamos una aplicación para los cinéfilos.",
-    image: softwareImage,
+    image:
+      "https://images.pexels.com/photos/2398354/pexels-photo-2398354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "#",
   },
   {
-    title: "Realizamos el sistema de administración para un centro psicológico.",
-    image: softwareImage,
+    title: "Realizamos el sistema de administración para Vienna.",
+    image:
+      "https://images.pexels.com/photos/1957478/pexels-photo-1957478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "#",
   },
   {
-    title: "Promocionamos una empresa de tours gastronómicos locales.",
-    image: softwareImage,
+    title: "Trabajamos con Crossfit Elite para llevarlo al siguiente nivel.",
+    image:
+      "https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "#",
   },
   {
     title:
-      "Posicionamos un centro de bienestar como referente en salud holística.",
-    image: softwareImage,
+      "Publicamos un artículo sobre inteligencia artificial en una revista internacional.",
+    image:
+      "https://images.pexels.com/photos/4238516/pexels-photo-4238516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "#",
   },
 ];
@@ -33,6 +38,11 @@ const projects = [
 export const OurProjects = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+
+  const handleGoToPortfolio = () => {
+    navigate("/portfolio");
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -123,9 +133,13 @@ export const OurProjects = () => {
           animate={isVisible ? { opacity: 1, y: 0 } : {}} // Llega a su posición final
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <button className="bg-blue text-[#F3F3EA] font-semibold py-2 px-6 rounded-full hover:bg-green-400 transition">
-            Ver más proyectos
-          </button>
+          <Button
+            className="w-1/4"
+            bgColor="bg-orange"
+            onClick={handleGoToPortfolio}
+          >
+            <span className="relative z-[5] text-white">Ver más proyectos</span>
+          </Button>
         </motion.div>
       </Container>
     </section>

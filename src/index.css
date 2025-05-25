@@ -54,6 +54,15 @@
   .bg-blue {
     background-color: rgb(var(--heading-2));
   }
+  .bg-yellow {
+    background-color: rgb(var(--heading-3));
+  }
+  .bg-green {
+    background-color: rgb(var(--accent-green));
+  }
+  .bg-pink {
+    background-color: rgb(var(--accent-pink));
+  }
 
   .text-heading-1 {
     color: rgb(var(--heading-1));
