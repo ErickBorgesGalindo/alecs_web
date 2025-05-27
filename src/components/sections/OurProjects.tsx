@@ -66,11 +66,7 @@ export const OurProjects = () => {
   }, []);
 
   return (
-    <section
-      id="our-projects"
-      ref={sectionRef}
-      className="mt-20 md:mt-20 mb-15 text-heading-1"
-    >
+    <section id="our-projects" ref={sectionRef}>
       <Container className="space-y-8">
         {/* Animación del título */}
         <motion.div

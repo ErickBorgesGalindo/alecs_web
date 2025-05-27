@@ -52,7 +52,9 @@ export const Numbers = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-20 text-heading-1">
+    <section ref={sectionRef} 
+    className="relative py-20 text-heading-1"
+    >
       <Container className="flex flex-col lg:gap-12 lg:flex-row items-center justify-between gap-20">
         {/* Mapa con íconos */}
         <motion.div

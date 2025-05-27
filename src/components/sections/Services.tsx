@@ -3,7 +3,12 @@ import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 import { Paragraph } from "../shared/Paragraph";
 import { CardService } from "../cards/CardService";
-import { FaLaptopCode, FaPencilRuler, FaFileCode, FaChartBar } from "react-icons/fa";
+import {
+  FaLaptopCode,
+  FaPencilRuler,
+  FaFileCode,
+  FaChartBar,
+} from "react-icons/fa";
 import { FaUserGear, FaMobileScreen } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -44,7 +49,9 @@ export const Services = () => {
         >
           <Title>¡ Crecemos Contigo !</Title>
           <Paragraph>
-            Impulsamos tu marca con soluciones de desarrollo personalizadas, diseñadas para inspirar innovación, acelerar el crecimiento y maximizar tu impacto digital.
+            Impulsamos tu marca con soluciones de desarrollo personalizadas,
+            diseñadas para inspirar innovación, acelerar el crecimiento y
+            maximizar tu impacto digital.
           </Paragraph>
         </motion.div>
 
@@ -68,37 +75,43 @@ export const Services = () => {
               Icon: FaLaptopCode,
               iconClassName: "text-heading-2",
               title: "Software Personalizado",
-              description: "Creamos soluciones a medida que se ajustan a tus procesos y objetivos.",
+              description:
+                "Creamos soluciones a medida que se ajustan a tus procesos y objetivos.",
             },
             {
               Icon: FaPencilRuler,
               iconClassName: "text-heading-3",
               title: "Diseño UX / UI",
-              description: "Diseños funcionales y atractivos que mejoran la experiencia del usuario.",
+              description:
+                "Diseños funcionales y atractivos que mejoran la experiencia del usuario.",
             },
             {
               Icon: FaUserGear,
               iconClassName: "text-accent-orange",
               title: "Mantenimiento y Soporte",
-              description: "Nos encargamos de que todo funcione. Mantenimiento, actualizaciones y soporte.",
+              description:
+                "Nos encargamos de que todo funcione. Mantenimiento, actualizaciones y soporte.",
             },
             {
               Icon: FaFileCode,
               iconClassName: "text-accent-green",
               title: "Desarrollo Web",
-              description: "Sitios web modernos, rápidos y seguros. Tecnología actual y diseño responsive.",
+              description:
+                "Sitios web modernos, rápidos y seguros. Tecnología actual y diseño responsive.",
             },
             {
               Icon: FaMobileScreen,
               iconClassName: "text-accent-pink",
               title: "Aplicaciones Móviles",
-              description: "Rendimiento, experiencia y funcionalidad que conectan con tu audiencia.",
+              description:
+                "Rendimiento, experiencia y funcionalidad que conectan con tu audiencia.",
             },
             {
               Icon: FaChartBar,
               iconClassName: "text-heading-2",
               title: "Marketing",
-              description: "Estrategias creativas para crecer. Enfocados en generar impacto real.",
+              description:
+                "Estrategias creativas para crecer. Enfocados en generar impacto real.",
             },
           ].map((card, index) => (
             <motion.div

@@ -1,6 +1,8 @@
 import Project from "../elements/Project";
 import { Paragraph } from "../shared/Paragraph";
 import projectImage from "../../assets/images/p1.webp";
+import Movies from "../../assets/images/Mockup-Movies.png";
+import PortfolioImage from "../../assets/images/Portfolio.png";
 
 export const Portfolio = () => {
   return (
@@ -34,13 +36,12 @@ export const Portfolio = () => {
           {/* Image */}
           <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-2-non lg:mx-0 mx-auto max-w-3xl">
             {/* Cambiar esta imagen por un gif o animación de mi logo */}
-            {/* <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnhpbndxeXJvOW5lMDk0ZXh2NWZtd28wMDdmdXUya3V6bTB2bm0xeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2XB76CaWPggiNW/giphy.gif" alt="Hero Image" width={2350} height={2359} className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non max-h-96"/> */}
             <img
-              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDIyajVvaWNoNTRjNDl5ODhsaXRleHNqaXd1Y29kb2ppaTFmeG8wdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Ih6NnugfrRa3UmyWO3/giphy.gif"
+              src={PortfolioImage}
               alt="Hero Image"
               width={2350}
               height={2359}
-              className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non max-h-96"
+              className="lg:absolute lg:w-full lg:h-full object-contain lg:max-h-non max-h-screen"
             />
           </div>
         </div>
@@ -57,7 +58,7 @@ export const Portfolio = () => {
               "Despliegue en la nube",
               "Optimización para móviles",
             ]}
-            image= {projectImage}
+            image= {Movies || projectImage}
             link="https://cineapp.com"
           />
 

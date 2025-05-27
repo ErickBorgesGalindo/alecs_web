@@ -18,7 +18,7 @@ export const Button = ({
         px-6 py-3 rounded-full outline-none cursor-pointer relative overflow-hidden border border-transparent
         ${bgColor}
         hover:bg-gradient-to-r hover:from-[rgb(187,168,255)] hover:to-[rgb(100,162,238)]
-        transition-colors duration-300
+        transition-colors duration-300 ease-in-out
         ${className}
       `}
     >

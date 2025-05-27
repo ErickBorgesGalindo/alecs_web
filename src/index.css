@@ -104,6 +104,10 @@
   .hover\:text-heading-2:hover {
     color: rgb(var(--color-bg)); /* Variable CSS */
   }
+  .hover\:text-accent-pink:hover {
+    color: rgb(var(--accent-pink)); /* Variable CSS */
+  }
+  
 
 }
 

@@ -100,18 +100,18 @@ export const Footer = () => {
         </div>
 
         <div className=" text-back grid grid-cols-1 md:grid-cols-3 ml-10 items-center content-center">
-          <Link to="#services" className="mb-5 text-back">
+          <a href="#services" className="mb-5 text-back">
             Servicios
-          </Link>
-          <Link to="#about-us" className="mb-5 text-back">
+          </a>
+          <a href="#about-us" className="mb-5 text-back">
             Nosotros
-          </Link>
-          <Link to="#our-projects" className="mb-5 text-back">
+          </a>
+          <a href="#our-projects" className="mb-5 text-back">
             Proyectos
-          </Link>
-          <Link to="#contact" className="mb-5 text-back">
+          </a>
+          <a href="#contact" className="mb-5 text-back">
             Contacto
-          </Link>
+          </a>
           <Link to="/portfolio" className="mb-5 text-back">
             Portfolio
           </Link>

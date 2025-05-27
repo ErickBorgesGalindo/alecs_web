@@ -46,7 +46,7 @@ const Project: React.FC<ProjectProps> = ({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 text-gray-500 hover:underline text-sm underline"
+          className="inline-block mt-4 text-gray-500 text-sm underline hover:text-accent-pink ease-in-out duration-200"
         >
           Ver proyecto →
         </a>

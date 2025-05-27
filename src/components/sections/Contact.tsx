@@ -34,7 +34,9 @@ export const Contact = () => {
   // };
 
   return (
-    <section id="about-us" className="mt-20 mb-10 px-4 sm:px-10">
+    <section id="about-us"
+     className="mt-20 mb-10 px-4 sm:px-10"
+     >
       <Container>
         <div className="max-w-3xl mx-auto rounded-lg shadow-lg shadow-box-shadow ease-liner focus-within:bg-body focus-within:border-primary bg-gradient-to-r from-[rgb(187,168,255)] to-[rgb(100,162,238)] p-1">
           <div className="bg-box-bg flex flex-col items-center p-6 sm:p-10">
